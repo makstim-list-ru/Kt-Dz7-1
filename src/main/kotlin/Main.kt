@@ -4,10 +4,6 @@ package ru.netology
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
 
     ChatService.createMessage(11, "this is message from owner #11 number 1")
     ChatService.createMessage(22, "this is message from owner #22 number 1")
