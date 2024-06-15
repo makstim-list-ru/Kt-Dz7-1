@@ -11,7 +11,7 @@ object ChatService {
 
     fun getLastMessagesFromChats(): MutableList<String> {
         //Получить список последних сообщений из чатов (можно в виде списка строк). Если сообщений в чате нет (все были удалены), то пишется «нет сообщений».
-        var strTmpList = mutableListOf<String>()
+        val strTmpList = mutableListOf<String>()
 
         chatList.forEach {
             strTmpList.add(it.messages.last())
@@ -24,11 +24,10 @@ object ChatService {
     fun getMessagesFromChat(idOwner: Int, numbersOfMessages: Int) : MutableList<String> {
         //Получить список сообщений из чата, указав: //ID собеседника; количество сообщений.
         // После того как вызвана эта функция, все отданные сообщения автоматически считаются прочитанными.
-        var strTmpList = mutableListOf<String>()
-
         val chatListTmp = chatList.filter { chat: Chat -> chat.idOwner == idOwner }
 
         if (chatListTmp.size == 1) {
+            chatListTmp[0].readStatus = true
             return (chatListTmp[0].messages.filterIndexed { index, s ->  (chatListTmp[0].messages.size - numbersOfMessages - 1) < index}).toMutableList()
         } else {
             throw RuntimeException("<< fun getMessagesFromChat >> ERROR = no message to get")
@@ -53,14 +52,14 @@ object ChatService {
         val chatListTmp = chatList.filter { chat: Chat -> chat.idOwner == idOwner }
 
         if (chatListTmp.size == 1) {
-            chatListTmp[0].messages.remove(message)
+            if (!chatListTmp[0].messages.remove(message)) throw RuntimeException("<< fun deleteMessage >> ERROR = no message to delete")
         } else {
             throw RuntimeException("<< fun deleteMessage >> ERROR = no message to delete")
         }
 
     }
 
-    fun createChat(idOwner: Int, message: String) {
+    private fun createChat(idOwner: Int, message: String) {
         //Создать чат. Чат создаётся, когда пользователю отправляется первое сообщение.
         val mess = mutableListOf<String>()
         mess.add(message)
@@ -70,7 +69,11 @@ object ChatService {
 
     fun deleteChat(idOwner: Int) {
         //Удалить чат, т. е. целиком удалить всю переписку.
-        chatList.removeIf(fun(chat: Chat) = (chat.idOwner == idOwner))
+        if (!chatList.removeIf(fun(chat: Chat) = (chat.idOwner == idOwner))) throw RuntimeException("<< fun deleteChat(idOwner: Int) >> ERROR = nothing to delete")
+    }
+
+    fun clear() {
+        chatList = mutableListOf<Chat>()
     }
 
 
