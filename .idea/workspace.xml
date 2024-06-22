@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac66e609-fbf0-42f6-ba38-dc94b44c50c7" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" afterDir="false" />
+    <list default="true" id="ac66e609-fbf0-42f6-ba38-dc94b44c50c7" name="Changes" comment="Commit w/tests corrected1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ChatService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ChatService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,10 +66,14 @@
     "Downloaded.Files.Path.Enabled": "false",
     "Gradle.Build Kt-Dz7-1.executor": "Run",
     "Gradle.ChatServiceTest (1).executor": "Run",
+    "Gradle.ChatServiceTest.deleteChat.executor": "Run",
     "Gradle.ChatServiceTest.deleteChatRtE.executor": "Run",
     "Gradle.ChatServiceTest.deleteMessage.executor": "Run",
     "Gradle.ChatServiceTest.deleteMessageRtE.executor": "Run",
     "Gradle.ChatServiceTest.executor": "Run",
+    "Gradle.ChatServiceTest.getChats.executor": "Run",
+    "Gradle.ChatServiceTest.getLastMessagesFromChats.executor": "Run",
+    "Gradle.ChatServiceTest.getMessagesFromChat.executor": "Run",
     "Gradle.ChatServiceTest.getMessagesFromChatXXX.executor": "Run",
     "Kotlin.MainKt.executor": "Run",
     "Repository.Attach.Annotations": "false",
@@ -104,8 +105,8 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.ChatServiceTest (1)">
-    <configuration name="ChatServiceTest (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ChatServiceTest">
+    <configuration name="ChatServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -129,7 +130,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceTest.deleteChatRtE" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChatServiceTest.deleteChat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -142,7 +143,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.ChatServiceTest.deleteChatRtE&quot;" />
+            <option value="&quot;ru.netology.ChatServiceTest.deleteChat&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -153,7 +154,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceTest.deleteMessage" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChatServiceTest.getChats" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -166,7 +167,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.ChatServiceTest.deleteMessage&quot;" />
+            <option value="&quot;ru.netology.ChatServiceTest.getChats&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -177,7 +178,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceTest.deleteMessageRtE" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChatServiceTest.getLastMessagesFromChats" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -190,7 +191,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.ChatServiceTest.deleteMessageRtE&quot;" />
+            <option value="&quot;ru.netology.ChatServiceTest.getLastMessagesFromChats&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -201,7 +202,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceTest.getMessagesFromChatXXX" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ChatServiceTest.getMessagesFromChat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -214,7 +215,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.ChatServiceTest.getMessagesFromChatXXX&quot;" />
+            <option value="&quot;ru.netology.ChatServiceTest.getMessagesFromChat&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -227,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ChatServiceTest (1)" />
-        <item itemvalue="Gradle.ChatServiceTest.deleteChatRtE" />
-        <item itemvalue="Gradle.ChatServiceTest.deleteMessage" />
-        <item itemvalue="Gradle.ChatServiceTest.deleteMessageRtE" />
-        <item itemvalue="Gradle.ChatServiceTest.getMessagesFromChatXXX" />
+        <item itemvalue="Gradle.ChatServiceTest" />
+        <item itemvalue="Gradle.ChatServiceTest.getLastMessagesFromChats" />
+        <item itemvalue="Gradle.ChatServiceTest.getChats" />
+        <item itemvalue="Gradle.ChatServiceTest.getMessagesFromChat" />
+        <item itemvalue="Gradle.ChatServiceTest.deleteChat" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +269,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718371590861</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit w/tests">
+      <option name="closed" value="true" />
+      <created>1718464415169</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718464415169</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit w/tests corrected1">
+      <option name="closed" value="true" />
+      <created>1718464856845</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1718464856845</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,7 +301,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Commit w/tests" />
+    <MESSAGE value="Commit w/tests corrected1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit w/tests corrected1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -297,6 +316,23 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt</url>
+          <line>60</line>
+          <properties class="ru.netology.ChatServiceTest" method="deleteMessage">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt</url>
+          <line>87</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
