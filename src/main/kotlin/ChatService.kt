@@ -40,7 +40,7 @@ object ChatService {
 //    }
 
     fun getMessagesFromChat(idOwner: Int, numbersOfMessages: Int): MutableList<String> =
-        chatList.filter() { chat: Chat -> chat.idOwner == idOwner }
+        chatList.asSequence().filter() { chat: Chat -> chat.idOwner == idOwner }
             .ifEmpty { throw RuntimeException("<< fun getMessagesFromChat >> ERROR = no message to get") }
             .onEach { it.readStatus = true }
             .last().messages.takeLast(numbersOfMessages).toMutableList()
@@ -80,7 +80,7 @@ object ChatService {
 
     fun deleteMessage(idOwner: Int, message: String) {
         //Удалить сообщение.
-        chatList.filter { chat: Chat -> chat.idOwner == idOwner }
+        chatList.asSequence().filter { chat: Chat -> chat.idOwner == idOwner }
             .ifEmpty { throw RuntimeException("<< fun deleteMessage >> ERROR = no message to delete") }
             .last().messages.remove(message)
             .let { if (!it) throw RuntimeException("<< fun deleteMessage >> ERROR = no message to delete") }
@@ -99,6 +99,10 @@ object ChatService {
         chatList.add(Chat(idOwner = idOwner, messages = mutableListOf<String>(message)))
     }
 
+    //fun deleteChat(idOwner: Int) {
+//        //Удалить чат, т. е. целиком удалить всю переписку.
+//        if (!chatList.removeIf(fun(chat: Chat) = (chat.idOwner == idOwner))) throw RuntimeException("<< fun deleteChat(idOwner: Int) >> ERROR = nothing to delete")
+//    }
     fun deleteChat(idOwner: Int) {
         //Удалить чат, т. е. целиком удалить всю переписку.
         chatList.removeIf(fun(chat: Chat) = (chat.idOwner == idOwner))

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac66e609-fbf0-42f6-ba38-dc94b44c50c7" name="Changes" comment="Commit w/tests corrected1">
+    <list default="true" id="ac66e609-fbf0-42f6-ba38-dc94b44c50c7" name="Changes" comment="Initial commit of branch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ChatService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ChatService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,7 @@
     &quot;Gradle.ChatServiceTest.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ChatServiceTest.getChats.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ChatServiceTest.getLastMessagesFromChats.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.ChatServiceTest.getMessagesFromChat.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ChatServiceTest.getMessagesFromChat.executor&quot;: &quot;Debug&quot;,
     &quot;Gradle.ChatServiceTest.getMessagesFromChatXXX.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.ChatServiceTest.getUnreadChatsCount.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
@@ -112,7 +111,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainKt">
+  <component name="RunManager" selected="Gradle.ChatServiceTest">
     <configuration name="ChatServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -137,30 +136,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ChatServiceTest.getChats" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.netology.ChatServiceTest.getChats&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="ChatServiceTest.getLastMessagesFromChats" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -175,6 +150,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;ru.netology.ChatServiceTest.getLastMessagesFromChats&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ChatServiceTest.getMessagesFromChat" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.netology.ChatServiceTest.getMessagesFromChat&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -218,11 +217,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.ChatServiceTest" />
+        <item itemvalue="Gradle.ChatServiceTest.getMessagesFromChat" />
         <item itemvalue="Kotlin.MainKt" />
         <item itemvalue="Gradle.ChatServiceTest.getUnreadChatsCount" />
         <item itemvalue="Gradle.ChatServiceTest.getLastMessagesFromChats" />
-        <item itemvalue="Gradle.ChatServiceTest.getChats" />
-        <item itemvalue="Gradle.ChatServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +312,8 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Commit w/tests" />
     <MESSAGE value="Commit w/tests corrected1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit w/tests corrected1" />
+    <MESSAGE value="Initial commit of branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit of branch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -327,15 +327,6 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt</url>
-          <line>60</line>
-          <properties class="ru.netology.ChatServiceTest" method="deleteMessage">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt</url>
           <line>87</line>
@@ -343,6 +334,11 @@
             <option name="lambda-ordinal" value="-1" />
           </properties>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/test/kotlin/ChatServiceTest.kt</url>
+          <line>44</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
