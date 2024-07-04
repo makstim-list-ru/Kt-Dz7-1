@@ -13,7 +13,7 @@ fun main() {
 
     println(ChatService.getMessagesFromChat(22,2))
 
-    println(ChatService.getLastMessagesFromChats())
+    println("\ngetLastMessagesFromChats()\n"+ChatService.getLastMessagesFromChats()+"\n")
 
     println(ChatService.getChats())
 
